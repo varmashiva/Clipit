@@ -3,12 +3,13 @@ import './Home.css';
 
 function Home() {
   return (
+    // creating container div
     <div>
       <div className="container">
       <header className="header">
         <div className="logo">
           <div className="logo-img"></div>
-          {/* <h1>Logo</h1> */}
+          
         </div>
         <div className="auth-buttons">
           <button className="btn">Login</button>
