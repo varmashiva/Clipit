@@ -1,19 +1,21 @@
-import React from 'react'
-import './Home.css';
+import circle from "../assets/circle.png";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   return (
     // creating container div
-    <div>
-      <div className="container">
+    <div className="container">
       <header className="header">
         <div className="logo">
           <div className="logo-img"></div>
-          
         </div>
         <div className="auth-buttons">
           <button className="btn">Login</button>
           <button className="btn">Sign Up</button>
+          <Link to="/recordings">
+            <img src={circle} alt="Profile Icon" className="user-icon" />
+          </Link>
         </div>
       </header>
 
@@ -36,8 +38,5 @@ function Home() {
     </div>
   );
 }
-    </div>
-  )
-}
 
-export default Home
+export default Home;
