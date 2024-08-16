@@ -1,0 +1,57 @@
+.profile-icon{
+    height: 180px;
+  }
+  .profile-details{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2.5rem;
+    margin-top: 7%;
+    margin-bottom: 10%;
+  }
+  
+  .user-name{
+    margin-bottom: 1%;
+  }
+  
+  .user-button{
+    margin-bottom: 1.1%;
+  }
+  
+  .user-icons{
+    height: 20px;
+  }
+  .user-collection-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .user-collection {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    cursor: pointer;
+    position: relative; 
+  }
+  
+  .user-collection::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .user-collection:hover::after {
+    transform: scaleX(1);
+  }
+  #back-btn-img{
+    height: 25px;
+  }
+  
