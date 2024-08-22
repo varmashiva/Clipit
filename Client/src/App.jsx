@@ -8,7 +8,7 @@ import RecordingPage from './Components/RecordingPage';
 function App() {
   return (
     <div>
-       <BrowserRouter>
+     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/recordings' element={<Profile/>}/>
