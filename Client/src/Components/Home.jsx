@@ -26,7 +26,9 @@ function Home() {
             <div className="line"></div>
             <div className="line"></div>
           </div>
-          <button className="start-recording-btn">Start Recording</button>
+          <Link to="/recording">
+            <button className="start-recording-btn">Start Recording</button>
+          </Link>
         </div>
 
         <div className="right-section">
