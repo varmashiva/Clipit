@@ -11,9 +11,7 @@ function Home() {
           <div className="logo-img"></div>
         </div>
         <div className="auth-buttons">
-          <Link to="/login">
-            <button className="btn">Login</button>
-          </Link>
+          <button className="btn">Login</button>
           <button className="btn">Sign Up</button>
           <Link to="/recordings">
             <img src={circle} alt="Profile Icon" className="user-icon" />
@@ -28,7 +26,9 @@ function Home() {
             <div className="line"></div>
             <div className="line"></div>
           </div>
-          <button className="start-recording-btn">Start Recording</button>
+          <Link to="/recording">
+            <button className="start-recording-btn">Start Recording</button>
+          </Link>
         </div>
 
         <div className="right-section">
