@@ -1,35 +1,28 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
-
-dotenv.config();
-
+const mongoose = require("mongoose");
+const cors = require("cors");
+const express = require("express");
+const dotenv = require("dotenv");
+const userRoutes = require("./routes/route");
 const app = express();
-const PORT = process.env.PORT || 3000;
-const CLUSTER_LINK = process.env.CLUSTER_LINK;
+dotenv.config();
+const URI = process.env.URI;
 
+app.use(cors());
 app.use(express.json());
-
-console.log('PORT:', PORT);
-console.log('CLUSTER_LINK:', CLUSTER_LINK);
-
-app.use(
-  cors({
-    origin: 'http://localhost:5173',
-    credentials: true,
-  })
-);
+app.use("/", userRoutes);
 
 mongoose
-  .connect(CLUSTER_LINK)
+  .connect(URI)
   .then(() => {
-    console.log('Connected to MongoDB');
+    console.log("Connected");
+    app.get("/", (req, res) => {
+      res.send("Working");
+    });
   })
   .catch((err) => {
-    console.error('Error connecting to MongoDB:', err.message);
+    console.log(err);
   });
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("Working");
 });
