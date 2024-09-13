@@ -11,8 +11,12 @@ function Home() {
           <div className="logo-img"></div>
         </div>
         <div className="auth-buttons">
-          <button className="btn">Login</button>
-          <button className="btn">Sign Up</button>
+          <Link to="/login">
+            <button className="btn">Login</button>
+          </Link>
+          <Link to="/signup">
+            <button className="btn">Sign Up</button>
+          </Link>
           <Link to="/recordings">
             <img src={circle} alt="Profile Icon" className="user-icon" />
           </Link>
